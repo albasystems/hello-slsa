@@ -124,7 +124,11 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
-      - uses: sigstore/cosign-installer@v2.8.1
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v2.8.1
         with:
           cosign-release: 'v2.0.0'
       - env:
