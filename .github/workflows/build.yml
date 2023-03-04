@@ -1,4 +1,4 @@
-name: Docker
+name: Hello SLSA Builder
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -115,3 +115,26 @@ jobs:
       registry-username: ${{ github.actor }}
     secrets:
       registry-password: ${{ secrets.GITHUB_TOKEN }}
+  
+  # Verify the previously created provenance.
+  verify-provenance:
+    needs: [build, provenance]
+    permissions:
+      packages: read # For reading attestations.
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - uses: sigstore/cosign-installer@v2.8.1
+        with:
+          cosign-release: 'v2.0.0'
+      - env:
+          REGISTRY_USERNAME: ${{ github.actor }}
+          REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          IMAGE_NAME: ${{ needs.build.outputs.image }}
+          IMAGE_DIGEST: ${{ needs.build.outputs.digest }}
+        run: |
+          cosign verify-attestation --type slsaprovenance "${IMAGE_NAME}@${IMAGE_DIGEST}" \
+          --policy policy.cue \
+          --certificate-identity "https://github.com/albasystems/slsa-provenance-generator/.github/workflows/generator_container_slsa3.yml@refs/tags/v1.5.0" \
+          --certificate-oidc-issuer "https://token.actions.githubusercontent.com"
+     
