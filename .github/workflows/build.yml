@@ -140,5 +140,5 @@ jobs:
           cosign verify-attestation --type slsaprovenance "${IMAGE_NAME}@${IMAGE_DIGEST}" \
           --policy policies/policy.cue \
           --certificate-identity "https://github.com/albasystems/slsa-provenance-generator/.github/workflows/generator_container_slsa3.yml@refs/tags/v1.5.0" \
-          --certificate-oidc-issuer "https://token.actions.githubusercontent.com"
+          --certificate-oidc-issuer "https://token.actions.githubusercontent.com" | jq .payload -r | base64 --decode | jq .
      
