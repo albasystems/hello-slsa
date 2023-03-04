@@ -1,0 +1,258 @@
+{
+  "_type": "https://in-toto.io/Statement/v0.1",
+  "predicateType": "https://slsa.dev/provenance/v0.2",
+  "subject": [
+    {
+      "name": "ghcr.io/albasystems/hello-slsa",
+      "digest": {
+        "sha256": "278ca5a875482d3321235a0a3d3b9307fa0701c99228accf0168acb6d62cf183"
+      }
+    }
+  ],
+  "predicate": {
+    "builder": {
+      "id": "https://github.com/albasystems/slsa-provenance-generator/.github/workflows/generator_container_slsa3.yml@refs/tags/v1.5.0"
+    },
+    "buildType": "https://github.com/slsa-framework/slsa-github-generator/container@v1",
+    "invocation": {
+      "configSource": {
+        "uri": "git+https://github.com/albasystems/hello-slsa@refs/heads/main",
+        "digest": {
+          "sha1": "7a9d468e70d401ceebaf9e2b22496f62c0656c0b"
+        },
+        "entryPoint": ".github/workflows/build.yml"
+      },
+      "parameters": {},
+      "environment": {
+        "github_actor": "abdennebi",
+        "github_actor_id": "787057",
+        "github_base_ref": "",
+        "github_event_name": "push",
+        "github_event_payload": {
+          "after": "7a9d468e70d401ceebaf9e2b22496f62c0656c0b",
+          "base_ref": null,
+          "before": "7e57807d24c4dc2562ecabe50245b09fe37292fb",
+          "commits": [
+            {
+              "author": {
+                "email": "abdennebi.dev@gmail.com",
+                "name": "Mohamed Abdennebi",
+                "username": "abdennebi"
+              },
+              "committer": {
+                "email": "abdennebi.dev@gmail.com",
+                "name": "Mohamed Abdennebi",
+                "username": "abdennebi"
+              },
+              "distinct": true,
+              "id": "7a9d468e70d401ceebaf9e2b22496f62c0656c0b",
+              "message": "correct the repo name",
+              "timestamp": "2023-03-03T17:34:45+01:00",
+              "tree_id": "2c5fef20f2fe0118618b4c253d251e63064cf366",
+              "url": "https://github.com/AlbaSystems/hello-slsa/commit/7a9d468e70d401ceebaf9e2b22496f62c0656c0b"
+            }
+          ],
+          "compare": "https://github.com/AlbaSystems/hello-slsa/compare/7e57807d24c4...7a9d468e70d4",
+          "created": false,
+          "deleted": false,
+          "forced": false,
+          "head_commit": {
+            "author": {
+              "email": "abdennebi.dev@gmail.com",
+              "name": "Mohamed Abdennebi",
+              "username": "abdennebi"
+            },
+            "committer": {
+              "email": "abdennebi.dev@gmail.com",
+              "name": "Mohamed Abdennebi",
+              "username": "abdennebi"
+            },
+            "distinct": true,
+            "id": "7a9d468e70d401ceebaf9e2b22496f62c0656c0b",
+            "message": "correct the repo name",
+            "timestamp": "2023-03-03T17:34:45+01:00",
+            "tree_id": "2c5fef20f2fe0118618b4c253d251e63064cf366",
+            "url": "https://github.com/AlbaSystems/hello-slsa/commit/7a9d468e70d401ceebaf9e2b22496f62c0656c0b"
+          },
+          "organization": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/125734010?v=4",
+            "description": null,
+            "events_url": "https://api.github.com/orgs/AlbaSystems/events",
+            "hooks_url": "https://api.github.com/orgs/AlbaSystems/hooks",
+            "id": 125734010,
+            "issues_url": "https://api.github.com/orgs/AlbaSystems/issues",
+            "login": "AlbaSystems",
+            "members_url": "https://api.github.com/orgs/AlbaSystems/members{/member}",
+            "node_id": "O_kgDOB36Meg",
+            "public_members_url": "https://api.github.com/orgs/AlbaSystems/public_members{/member}",
+            "repos_url": "https://api.github.com/orgs/AlbaSystems/repos",
+            "url": "https://api.github.com/orgs/AlbaSystems"
+          },
+          "pusher": {
+            "email": "abdennebi.dev@gmail.com",
+            "name": "abdennebi"
+          },
+          "ref": "refs/heads/main",
+          "repository": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/branches{/branch}",
+            "clone_url": "https://github.com/AlbaSystems/hello-slsa.git",
+            "collaborators_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/comments{/number}",
+            "commits_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/contributors",
+            "created_at": 1677785610,
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/deployments",
+            "description": null,
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/downloads",
+            "events_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/events",
+            "fork": false,
+            "forks": 0,
+            "forks_count": 0,
+            "forks_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/forks",
+            "full_name": "AlbaSystems/hello-slsa",
+            "git_commits_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/git/tags{/sha}",
+            "git_url": "git://github.com/AlbaSystems/hello-slsa.git",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": true,
+            "has_pages": false,
+            "has_projects": true,
+            "has_wiki": true,
+            "homepage": null,
+            "hooks_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/hooks",
+            "html_url": "https://github.com/AlbaSystems/hello-slsa",
+            "id": 608810356,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/issues{/number}",
+            "keys_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/labels{/name}",
+            "language": "Dockerfile",
+            "languages_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "master_branch": "main",
+            "merges_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/merges",
+            "milestones_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/milestones{/number}",
+            "mirror_url": null,
+            "name": "hello-slsa",
+            "node_id": "R_kgDOJEm1dA",
+            "notifications_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/notifications{?since,all,participating}",
+            "open_issues": 0,
+            "open_issues_count": 0,
+            "organization": "AlbaSystems",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/125734010?v=4",
+              "email": null,
+              "events_url": "https://api.github.com/users/AlbaSystems/events{/privacy}",
+              "followers_url": "https://api.github.com/users/AlbaSystems/followers",
+              "following_url": "https://api.github.com/users/AlbaSystems/following{/other_user}",
+              "gists_url": "https://api.github.com/users/AlbaSystems/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/AlbaSystems",
+              "id": 125734010,
+              "login": "AlbaSystems",
+              "name": "AlbaSystems",
+              "node_id": "O_kgDOB36Meg",
+              "organizations_url": "https://api.github.com/users/AlbaSystems/orgs",
+              "received_events_url": "https://api.github.com/users/AlbaSystems/received_events",
+              "repos_url": "https://api.github.com/users/AlbaSystems/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/AlbaSystems/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/AlbaSystems/subscriptions",
+              "type": "Organization",
+              "url": "https://api.github.com/users/AlbaSystems"
+            },
+            "private": false,
+            "pulls_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/pulls{/number}",
+            "pushed_at": 1677861288,
+            "releases_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/releases{/id}",
+            "size": 11,
+            "ssh_url": "git@github.com:AlbaSystems/hello-slsa.git",
+            "stargazers": 0,
+            "stargazers_count": 0,
+            "stargazers_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/stargazers",
+            "statuses_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/subscribers",
+            "subscription_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/subscription",
+            "svn_url": "https://github.com/AlbaSystems/hello-slsa",
+            "tags_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/tags",
+            "teams_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/teams",
+            "topics": [],
+            "trees_url": "https://api.github.com/repos/AlbaSystems/hello-slsa/git/trees{/sha}",
+            "updated_at": "2023-03-03T11:53:21Z",
+            "url": "https://github.com/AlbaSystems/hello-slsa",
+            "visibility": "public",
+            "watchers": 0,
+            "watchers_count": 0,
+            "web_commit_signoff_required": false
+          },
+          "sender": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/787057?v=4",
+            "events_url": "https://api.github.com/users/abdennebi/events{/privacy}",
+            "followers_url": "https://api.github.com/users/abdennebi/followers",
+            "following_url": "https://api.github.com/users/abdennebi/following{/other_user}",
+            "gists_url": "https://api.github.com/users/abdennebi/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/abdennebi",
+            "id": 787057,
+            "login": "abdennebi",
+            "node_id": "MDQ6VXNlcjc4NzA1Nw==",
+            "organizations_url": "https://api.github.com/users/abdennebi/orgs",
+            "received_events_url": "https://api.github.com/users/abdennebi/received_events",
+            "repos_url": "https://api.github.com/users/abdennebi/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/abdennebi/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/abdennebi/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/abdennebi"
+          }
+        },
+        "github_head_ref": "",
+        "github_ref": "refs/heads/main",
+        "github_ref_type": "branch",
+        "github_repository_id": "608810356",
+        "github_repository_owner": "albasystems",
+        "github_repository_owner_id": "125734010",
+        "github_run_attempt": "3",
+        "github_run_id": "4325394359",
+        "github_run_number": "7",
+        "github_sha1": "7a9d468e70d401ceebaf9e2b22496f62c0656c0b"
+      }
+    },
+    "metadata": {
+      "buildInvocationID": "4325394359-3",
+      "completeness": {
+        "parameters": true,
+        "environment": false,
+        "materials": false
+      },
+      "reproducible": false
+    },
+    "materials": [
+      {
+        "uri": "git+https://github.com/albasystems/hello-slsa@refs/heads/main",
+        "digest": {
+          "sha1": "7a9d468e70d401ceebaf9e2b22496f62c0656c0b"
+        }
+      }
+    ]
+  }
+}

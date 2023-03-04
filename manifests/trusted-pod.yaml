@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-slsa
+spec:
+  restartPolicy : OnFailure
+  containers:
+  - name: hello-slsa
+    image: ghcr.io/albasystems/hello-slsa:main
+    imagePullPolicy: Always
