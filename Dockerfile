@@ -1,2 +1,2 @@
 FROM alpine
-CMD ["echo", "Hello, SLSA!"]
+CMD ["echo", "Hello, KCD 2023!"]
