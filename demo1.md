@@ -39,9 +39,9 @@ cosign sign $IMAGE
 cosign verify $IMAGE  --certificate-identity abdennebi.dev@gmail.com --certificate-oidc-issuer "https://github.com/login/oauth" | jq .
 ````
 
-8 - Check the rekor entry, got to https://rekor.tlog.dev/?logIndex=$log_index
+8 - Check the rekor entry, go to https://rekor.tlog.dev/?logIndex=$log_index
 ````shell
-log_index=$(cosign verify $IMAGE  --certificate-identity abdennebi.dev@gmail.com --certificate-oidc-issuer "https://github.com/login/oauth" -o json | jq '.[-1].optional.Bundle.Payload.logIndex')
+log_index=$(cosign verify $IMAGE  --certificate-identity abdennebi.dev@gmail.com --certificate-oidc-issuer "https://github.com/login/oauth" -o json | jq '.[-1].optional.Bundle.Payload.logIndex')``
 
 echo $log_index
 ````
