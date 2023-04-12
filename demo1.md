@@ -1,7 +1,7 @@
 # Demo 1 : Sigstore
 
 
-1 - Edit the Dockerfile and commit
+1 - Edit the Dockerfile commit and push (the push will trigger the build, we will use the results in demo 2)
 
 2 - Create container image
 ````shell

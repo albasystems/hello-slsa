@@ -10,15 +10,18 @@ IMAGE=ghcr.io/albasystems/hello-slsa:main
 
 IDENTITY="https://github.com/albasystems/slsa-provenance-generator/.github/workflows/generator_container_slsa3.yml@refs/tags/v1.5.0"
 
-cosign verify-attestation --type slsaprovenance --policy policies/policy.cue $IMAGE \
+cosign verify-attestation --type slsaprovenance  \
     --certificate-identity $IDENTITY \
-    --certificate-oidc-issuer "https://token.actions.githubusercontent.com" | jq .
-
+    --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+    --policy policies/policy.cue $IMAGE \
+    | jq .
 ````
 
-4 - Display the attestation : 
+4 - (Optional) Display the attestation : 
 ````shell
-cosign verify-attestation --type slsaprovenance --policy policies/policy.cue $IMAGE \
+cosign verify-attestation --type slsaprovenance  \
     --certificate-identity $IDENTITY \
-    --certificate-oidc-issuer "https://token.actions.githubusercontent.com" | jq .payload -r | base64 -d | jq .
+    --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+    --policy policies/policy.cue $IMAGE \
+    | jq .payload -r | base64 -d | jq .
 ````
