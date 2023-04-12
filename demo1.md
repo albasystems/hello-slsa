@@ -1,7 +1,7 @@
 # Demo 1 : Sigstore
 
 
-1 - Start Docker
+1 - Edit the Dockerfile and commit
 
 2 - Create container image
 ````shell
@@ -45,7 +45,6 @@ log_index=$(cosign verify $IMAGE  --certificate-identity abdennebi.dev@gmail.com
 
 echo $log_index
 ````
-
 or 
 ````shell
 rekor-cli get --format json --log-index $logIndex | jq .
