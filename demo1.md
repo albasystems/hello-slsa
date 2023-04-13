@@ -18,7 +18,7 @@ docker run $IMAGE
 4 - Push the image
 
 ````shell
-Docker push $IMAGE
+docker push $IMAGE
 ````
 
 5 - Update the image name with the image's digest : We need this because we want to sign an immutable image.
