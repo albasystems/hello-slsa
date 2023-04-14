@@ -48,3 +48,6 @@ spec:
             - key: "{{ regex_match('^https://github.com/albasystems/slsa-provenance-generator/.github/workflows/generator_container_slsa3.yml@refs/tags/v[0-9].[0-9].[0-9]$','{{ builder.id}}') }}"
               operator: Equals
               value: true
+            - key: "{{ invocation.configSource.uri }}"
+              operator: Equals
+              value: 'git+https://github.com/albasystems/hello-slsa@refs/heads/main'
